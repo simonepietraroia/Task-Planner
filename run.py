@@ -13,7 +13,21 @@ def display_menu():
     print("5. Load Tasks")
     print("6. Exit")
 
-# def add_task():
+def add_task():
+    """
+    This function allows the user to input the name, due-date, and 
+    additional notes/description step by step
+    """
+    task-name = input("Enter task name: ")
+    due-date = input("Enter due date: ")
+    notes = input("Enter additional notes: ")
+
+    task = {
+        "name" = task-name,
+        "due_dates": due_date,
+        "notes": notes,
+        "completed": False
+    }
 
 # def view_task():
 
@@ -25,5 +39,6 @@ def display_menu():
 
 def main():
     display_menu()
+    add_task()
 
 main()
