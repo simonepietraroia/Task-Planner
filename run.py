@@ -1,3 +1,16 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import json
+
+def display_menu():
+
+def add_task():
+
+def view_task():
+
+def complete_task():
+
+def save_task():
+
+def load_task():
+
+def main():
+
