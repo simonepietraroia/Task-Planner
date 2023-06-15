@@ -1,6 +1,6 @@
 import json
 
-tasks = [name: "sfas", due_date: "dsfdf", notes: "dsfsd", completed: False]
+tasks = [{"name": "sfas", "due_date": "dsfdf", "notes": "dsfsd", "completed": False}]
 
 def display_menu():
     """
@@ -69,7 +69,11 @@ def complete_task():
     except ValueError:
         print("Invalid input.")
 
-# def save_task():
+def save_task():
+    with open("tasks.json", "r") as file:
+        json.dump(tasks, file)
+        print("Tasks successfully saved.")
+
 
 # def load_task():
 
@@ -78,6 +82,7 @@ def main():
     # add_task()
     # view_task()
     # complete_task()
-    
+    save_task()
+
 
 main()
