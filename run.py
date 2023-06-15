@@ -52,6 +52,10 @@ def view_task():
         print("Status:", status)
         
 def complete_task():
+    """
+    This function searches if there are tasks and shows the user the tasks that are saved
+    and prompt the user to input the number of the task to mark it as complete
+    """
     if len(tasks) == 0:
         print("No tasks found.")
         return
@@ -70,6 +74,10 @@ def complete_task():
         print("Invalid input.")
 
 def save_task():
+    """
+    This function takes all the information currently stores in the tasks
+    variable and saves it to the tasks.json file
+    """
     with open("tasks.json", "w") as file:
         json.dump(tasks, file)
         print("Tasks successfully saved.")
