@@ -1,6 +1,6 @@
 import json
 
-tasks = []
+tasks = [name: "sfas", due_date: "dsfdf", notes: "dsfsd", completed: False]
 
 def display_menu():
     """
@@ -51,9 +51,23 @@ def view_task():
         print("Notes:", taks["notes"])
         print("Status:", status)
     
+def complete_task():
+    if len(tasks) == 0:
+        print("No tasks found.")
+        return
 
+    view_task()
 
-# def complete_task():
+    try:
+        index = int(input("Enter the task number to mark as complete: ")) - 1
+        if index < 0 or index >= len(tasks):
+            print("Invalid task number.")
+            return
+        
+        tasks[index]["completed"] = True
+        print("Task mark as complete.")
+    except ValueError:
+        print("Invalid input.")
 
 # def save_task():
 
@@ -63,5 +77,7 @@ def main():
     display_menu()
     # add_task()
     # view_task()
+    # complete_task()
+    
 
 main()
