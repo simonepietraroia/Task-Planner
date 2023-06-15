@@ -70,19 +70,32 @@ def complete_task():
         print("Invalid input.")
 
 def save_task():
-    with open("tasks.json", "r") as file:
+    with open("tasks.json", "w") as file:
         json.dump(tasks, file)
         print("Tasks successfully saved.")
 
+def load_task():
+    """
+    The function takes the perviously created and saved tasks and assigns them to the 
+    tasks variable from the tasks.json file. This must be used when starting up the program to load previous tasks.
+    """
+    try:
+        with open("tasks.json", "r") as file:
+            loaded_tasks = json.load(file)
+            tasks.clear()
+            tasks.extend(loaded_tasks)
 
-# def load_task():
+        print("Tasks loaded from file.")
+    except FileNotFoundError:
+        print("No saved tasks found.")
 
 def main():
     display_menu()
     # add_task()
     # view_task()
     # complete_task()
-    save_task()
+    # save_task()
+    load_task()
 
 
 main()
