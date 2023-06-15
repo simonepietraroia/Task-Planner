@@ -1,6 +1,6 @@
 import json
 
-tasks = [{"name": "sfas", "due_date": "dsfdf", "notes": "dsfsd", "completed": False}]
+tasks = []
 
 def display_menu():
     """
@@ -23,14 +23,14 @@ def add_task():
     name = input("Enter task name: ")
     due_date = input("Enter due date: ")
     notes = input("Enter additional notes: ")
-
+    
     task = {
         "name": name,
-        "due_dates": due_date,
+        "due_date": due_date,
         "notes": notes,
         "completed": False
     }
-
+    
     tasks.append(task)
     print("Task added successfully.")
 
@@ -42,15 +42,15 @@ def view_task():
     if len(tasks) == 0:
         print("No tasks found.")
         return
-
+    
     for index, task in enumerate(tasks):
-        status = "Completed" if task ["completed"] else "Not Completed"
+        status = "Completed" if task["completed"] else "Not Completed"
         print(f"\nTask #{index+1}")
         print("Name:", task["name"])
         print("Due Date:", task["due_date"])
-        print("Notes:", taks["notes"])
+        print("Notes:", task["notes"])
         print("Status:", status)
-    
+        
 def complete_task():
     if len(tasks) == 0:
         print("No tasks found.")
@@ -90,12 +90,24 @@ def load_task():
         print("No saved tasks found.")
 
 def main():
-    display_menu()
-    # add_task()
-    # view_task()
-    # complete_task()
-    # save_task()
-    load_task()
+    while True:
+        display_menu()
+        choice = input("enter your choice (1-6): ")
 
+        if choice == "1":
+            add_task()
+        elif choice == "2":
+            view_task()
+        elif choice == "3":
+            complete_task()
+        elif choice == "4":
+            save_task()
+        elif choice == "5":
+            load_task()
+        elif choice == "6":
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 main()
