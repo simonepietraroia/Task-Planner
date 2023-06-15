@@ -1,5 +1,7 @@
 import json
 
+tasks = []
+
 def display_menu():
     """
     This function displays the different task options that 
@@ -29,7 +31,24 @@ def add_task():
         "completed": False
     }
 
-# def view_task():
+def view_task():
+    """
+    This function searches the tasks variable for previously recorded tasks and displays them for the user.
+    if there are none then it will alert the user"
+    """
+    if len(tasks) == 0:
+        print("No tasks found.")
+        return
+
+    for index, task in enumerate(tasks):
+        status = "Completed" if task ["completed"] else "Not Completed"
+        print(f"\nTask #{index+1}")
+        print("Name:", task["name"])
+        print("Due Date:", task["due_date"])
+        print("Notes:", taks["notes"])
+        print("Status:", status)
+    
+
 
 # def complete_task():
 
@@ -39,6 +58,6 @@ def add_task():
 
 def main():
     display_menu()
-    add_task()
+    # add_task()
 
 main()
