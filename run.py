@@ -20,9 +20,9 @@ def add_task():
     This function allows the user to input the name, due-date, and 
     additional notes/description step by step
     """
-    name = input("Enter task name: ")
-    due_date = input("Enter due date: ")
-    notes = input("Enter additional notes: ")
+    name = input("Enter task name:\n")
+    due_date = input("Enter due date:\n")
+    notes = input("Enter additional notes:\n")
     
     task = {
         "name": name,
@@ -63,7 +63,7 @@ def complete_task():
     view_task()
 
     try:
-        index = int(input("Enter the task number to mark as complete: ")) - 1
+        index = int(input("Enter the task number to mark as complete:\n")) - 1
         if index < 0 or index >= len(tasks):
             print("Invalid task number.")
             return
