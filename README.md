@@ -1,32 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Task-Planner
 
-Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+<img src="images/mockup.png" alt="picture responsivness for 4 different devices" width="400px">
 
-## Reminders
+## Features
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### Existing Features
 
-## Creating the Heroku app
+#### Add Task
+<img src="images/add-mew.JPG" alt="picture responsivness for 4 different devices" width="400px">
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+#### View Task
 
-1. `heroku/python`
-2. `heroku/nodejs`
+<img src="images/view.JPG" alt="picture responsivness for 4 different devices" width="400px">
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+#### Mark as complete
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+<img src="images/markascomplete.JPG" alt="picture responsivness for 4 different devices" width="400px">
 
-Connect your GitHub repository and deploy as normal.
+#### Save Tasks
 
-## Constraints
+<img src="images/save.JPG" alt="picture responsivness for 4 different devices" width="400px">
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+#### Load Tasks
 
----
+<img src="images/load.JPG" alt="picture responsivness for 4 different devices" width="400px">
 
-Happy coding!
+#### Exiting
+
+<img src="images/exiting.JPG" alt="picture responsivness for 4 different devices" width="400px">
+
+#### Future Features
+
+## Testing
+
+### Bugs
+
+### Validator Testing
+
+## Deployment
+
+- Steps for deployment:
+    - Fork or cline this repositary
+    - Create a new Heroku app
+    - Set the Buildbacks to Python and NodeJS in that order
+    - Link the Heroku app to the repository
+    - Click on Deploy
+    
+## Credits
+
+
+
