@@ -3,7 +3,7 @@ Task Planner is a python terminal application launched on Code Institute's mock 
 
 This application provides the user with the ability to create and manage their tasks/ plans. The app provides a menu in the terminal in which the user can decide which action to proceed with and previous tasks can be saved to access them at a later date.
 
-Live link of application
+[Live link of application](https://task-planner-hfra.onrender.com)
 
 <img src="images/mockup.png" alt="picture responsivness for 4 different devices" width="400px">
 
@@ -68,11 +68,13 @@ Live link of application
 ## Deployment
 
 - Steps for deployment:
-    - Fork or cline this repositary
-    - Create a new Heroku app
-    - Set the Buildbacks to Python and NodeJS in that order
-    - Link the Heroku app to the repository
-    - Click on Deploy
+    - Go to [Render.com](https://render.com/)
+    - Login with GitHub account
+    - Create new deployment project
+    - Select "link GitHub" and link all repositories
+    - Select desired repositary
+    - Set deployment settings to Europe region, main branch, python3 enviroment, and add instructed Port keys and Values
+    - Click "create we service" button
     
 ## Credits
 
